@@ -1,0 +1,3 @@
+## Disable all directory views (recommended for better security) to prevent users from "browsing" the directory
+## By default, if you go to a  directory with no index.html or index.php, the browser will list the contents of the directory
+Options -Indexes

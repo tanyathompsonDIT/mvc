@@ -1,0 +1,31 @@
+## Disable multi-views (recommended for canonical URIs - your preferred )
+## By default, if you have a file called configuration.php (or other extension) in the root folder, 
+## if  you set up a rule in your htaccess for a virtual folder called configuration/ then
+## you'll have a problem with your rule because the server will choose configuration.php automatically 
+## (if MultiViews is enabled, which is the case most of the time). 
+Options -MultiViews
+
+## Enables the Apache module mod_rewrite which allows for URL requests to be rewritten.
+## Examples
+## http://example.com/folder1/ becomes http://example.com/folder2/ or just http://example.com/
+## http://example.com/file.html becomes http://example.com/folder1/file.html
+## http://example.com becomes http://www.example.com
+## convert http:// to https://
+RewriteEngine On
+
+## Changes the root folder from /DIT to /DIT/Lecture7b_01_AuthContd/public/ for any rewrites
+RewriteBase /mvc/public/
+
+## Examine the ORIGINAL REQUEST to see if refers to a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+## Examine the ORIGINAL REQUEST to see if refers to a file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+## IF the file and directory do not exist, 
+## then get the {REQUEST_URI} and redirect it to /DIT/Lecture7b_01_AuthContd/public/index.php, 
+## with a query string whose key "url" is assigned the value of the {REQUEST_URI}. 
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+## MUST be SSL
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*) https://%{HTTP_HOST}/$1 [R=301,L]

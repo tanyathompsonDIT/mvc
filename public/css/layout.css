@@ -1,0 +1,78 @@
+/* Change jumbotron colour */ 
+.jumbotron {
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+}
+
+/* Change navbar settings */ 
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* Change background colour */ 
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+/* Change logo colours */ 
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+
+/* Change left margins, right margins and widths of input fields - to be responsive */ 
+.login-container {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+@media only screen and (max-width: 900px) { /* apples to devices that do not have wide screens */
+    .login-container {
+        margin-left: 2px;
+        margin-right: 2px;
+        }
+}
+.login-control {
+    width: 50%;
+}
+@media only screen and (max-width: 900px) { /* apples to devices that do not have wide screens */
+    .login-control {
+        width: 100%;
+    }
+}
+
+/* Change top margins of alerts in forms - to be responsive */ 
+.form-control-alert {
+    margin-top: 5px;
+}
+
+/* Change colour of buttons */ 
+.btn {
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+}
