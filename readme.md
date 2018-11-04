@@ -1,5 +1,5 @@
 
-#Overview
+# Overview
 This project offers a simple PHP MVC Application, which allows users to sign in and sign out on a website.
 
 It was created to help students in understanding how to build PHP MVC applications, without any frameworks (e.g., Laravel).
